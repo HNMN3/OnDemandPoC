@@ -58,7 +58,7 @@ if __name__ == '__main__':
 ```shell
 curl --location --request GET 'https://okv9m6dds0.execute-api.us-west-1.amazonaws.com/poc/api/?lat=32.866004&lng=-96.652901' \
 --header 'X-Amz-Date: 20211124T102508Z' \
---header 'Authorization: AWS4-HMAC-SHA256 Credential=AKIAZJIYWTQ64XZGHXER/20211124/us-west-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date, Signature=0e5fb473607c3ec71155c61721e676d51f1573e0df16d12b67e9509ef8df0dc8' \
+--header 'Authorization: AWS4-HMAC-SHA256 Credential=XXXXXXXXXX/20211124/us-west-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date, Signature=XXXXXXXXXXXXXXXXXXXXXXXX' \
 --data-raw ''
 ```
 
