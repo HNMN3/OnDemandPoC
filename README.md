@@ -55,6 +55,7 @@ if __name__ == '__main__':
 ```
 
 ## Hitting API with cURL
+The API request needs to be signed with AWS Signature Version 4. Please follow this [link](https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html) for more details. 
 ```shell
 curl --location --request GET 'https://okv9m6dds0.execute-api.us-west-1.amazonaws.com/poc/api/?lat=32.866004&lng=-96.652901' \
 --header 'X-Amz-Date: 20211124T102508Z' \
