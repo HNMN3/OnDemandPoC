@@ -16,7 +16,11 @@ The API gets authenticated using AWS IAM. Here are the different ways to hit the
 4. Put your lat/lng in the Params section.
 5. Finally, hit the API.
 
-Note: To manually authenticate your requests using another tool or environment,
+### Postman Sample call
+![Postman](postman_example.png)
+
+### Note 
+To manually authenticate your requests using another tool or environment,
 use the [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 For more information, see [Signing requests](https://docs.aws.amazon.com/apigateway/api-reference/signing-requests/).
 
