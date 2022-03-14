@@ -40,7 +40,7 @@ def m2m_request(access_key, secret_key, lat, lng):
         'aws_access_key': access_key,
         'aws_secret_access_key': secret_key,
         'aws_host': "api.geox-ai.com",
-        'aws_region': "us-west-1",
+        'aws_region': "us-east-1",
         'aws_service': "execute-api"
     }
     auth = AWSRequestsAuth(**aws_details)
@@ -63,7 +63,7 @@ The API request needs to be signed with AWS Signature Version 4. Please follow t
 ```shell
 curl --location --request GET 'https://api.geox-ai.com/poc/api/?lat=32.866004&lng=-96.652901' \
 --header 'X-Amz-Date: 20211124T102508Z' \
---header 'Authorization: AWS4-HMAC-SHA256 Credential=XXXXXXXXXX/20211124/us-west-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date, Signature=XXXXXXXXXXXXXXXXXXXXXXXX' \
+--header 'Authorization: AWS4-HMAC-SHA256 Credential=XXXXXXXXXX/20211124/us-east-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date, Signature=XXXXXXXXXXXXXXXXXXXXXXXX' \
 --data-raw ''
 ```
 
