@@ -28,7 +28,7 @@ For more information, see [Signing requests](https://docs.aws.amazon.com/apigate
 1. We will need following libraries to be installed
    - requests
    - aws_requests_auth
-2. Here is the python code to hit the API
+2. Here is the python code to hit the API (Get request)
 ```python
 import requests
 from aws_requests_auth.aws_auth import AWSRequestsAuth
@@ -57,7 +57,43 @@ def m2m_request(access_key, secret_key, lat, lng):
 if __name__ == '__main__':
     m2m_request("YOUR_API_KEY", "YOUR_API_SECRET", "LATITUDE", "LONGITUDE")
 ```
+3. Here is the python code to hit the API (Post request)
+```python
+import requests
+from aws_requests_auth.aws_auth import AWSRequestsAuth
 
+
+def m2m_request(access_key, secret_key):
+    api_url = "https://api.geox-ai.com/poc/api/"
+    aws_details = {
+        'aws_access_key': access_key,
+        'aws_secret_access_key': secret_key,
+        'aws_host': "api.geox-ai.com",
+        'aws_region': "us-east-1",
+        'aws_service': "execute-api"
+    }
+    auth = AWSRequestsAuth(**aws_details)
+
+    data = {
+        "locations": [
+            {
+                "lat": 30.74716231727497,
+                "lng": -95.61527307112493,
+                "corellationId": "unique_id"
+            },
+            # ... more locations
+        ]
+    }
+
+    res = requests.post(api_url, json=data, auth=auth)
+    assert res.status_code == 200, f"Request failed with status: {res.status_code}"
+    res_data = res.json()
+    return res_data
+
+
+if __name__ == '__main__':
+    m2m_request("YOUR_API_KEY", "YOUR_API_SECRET")
+```
 ## Hitting API with cURL
 The API request needs to be signed with AWS Signature Version 4. Please follow this [link](https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html) for more details. 
 ```shell
