@@ -28,14 +28,15 @@ For more information, see [Signing requests](https://docs.aws.amazon.com/apigate
 1. We will need following libraries to be installed
    - requests
    - aws_requests_auth
-2. Here is the python code to hit the API (Get request)
+### Python code for API Call with GET Method
 ```python
+import json
 import requests
 from aws_requests_auth.aws_auth import AWSRequestsAuth
 
 
 def m2m_request(access_key, secret_key, lat, lng):
-    api_url = "https://api.geox-ai.com/poc/api/"
+    api_url = "https://api.geox-ai.com/api/v2/locations"
     aws_details = {
         'aws_access_key': access_key,
         'aws_secret_access_key': secret_key,
@@ -55,16 +56,19 @@ def m2m_request(access_key, secret_key, lat, lng):
 
 
 if __name__ == '__main__':
-    m2m_request("YOUR_API_KEY", "YOUR_API_SECRET", "LATITUDE", "LONGITUDE")
+    m2m_response = m2m_request("AKIA2TITFGWE5F7HF5PB", "p60sVYmX1SBwUkKfGZF9N5Aml9plS4Izl07Bl1v9",
+                               45.6696163800542, -122.5038830583887)
+    print(json.dumps(m2m_response, indent=2))
 ```
-3. Here is the python code to hit the API (Post request)
+### Python code for API Call with POST Method
 ```python
+import json
 import requests
 from aws_requests_auth.aws_auth import AWSRequestsAuth
 
 
 def m2m_request(access_key, secret_key):
-    api_url = "https://api.geox-ai.com/poc/api/"
+    api_url = "https://api.geox-ai.com/api/v2/locations"
     aws_details = {
         'aws_access_key': access_key,
         'aws_secret_access_key': secret_key,
@@ -77,8 +81,8 @@ def m2m_request(access_key, secret_key):
     data = {
         "locations": [
             {
-                "lat": 30.74716231727497,
-                "lng": -95.61527307112493,
+                "lat": 45.6696163800542,
+                "lng": -122.5038830583887,
                 "corellationId": "unique_id"
             },
             # ... more locations
@@ -92,7 +96,8 @@ def m2m_request(access_key, secret_key):
 
 
 if __name__ == '__main__':
-    m2m_request("YOUR_API_KEY", "YOUR_API_SECRET")
+    m2m_response = m2m_request("AKIA2TITFGWE5F7HF5PB", "p60sVYmX1SBwUkKfGZF9N5Aml9plS4Izl07Bl1v9")
+    print(json.dumps(m2m_response, indent=2))
 ```
 ## Hitting API with cURL
 The API request needs to be signed with AWS Signature Version 4. Please follow this [link](https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html) for more details. 
