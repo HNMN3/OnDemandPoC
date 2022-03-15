@@ -56,7 +56,7 @@ def m2m_request(access_key, secret_key, lat, lng):
 
 
 if __name__ == '__main__':
-    m2m_response = m2m_request("AKIA2TITFGWE5F7HF5PB", "p60sVYmX1SBwUkKfGZF9N5Aml9plS4Izl07Bl1v9",
+    m2m_response = m2m_request("YOUR_API_KEY", "YOUR_API_SECRET",
                                45.6696163800542, -122.5038830583887)
     print(json.dumps(m2m_response, indent=2))
 ```
@@ -96,7 +96,7 @@ def m2m_request(access_key, secret_key):
 
 
 if __name__ == '__main__':
-    m2m_response = m2m_request("AKIA2TITFGWE5F7HF5PB", "p60sVYmX1SBwUkKfGZF9N5Aml9plS4Izl07Bl1v9")
+    m2m_response = m2m_request("YOUR_API_KEY", "YOUR_API_SECRET")
     print(json.dumps(m2m_response, indent=2))
 ```
 ## Hitting API with cURL
