@@ -122,17 +122,17 @@ https://api.geox-ai.com/api/v2/locations?lat=45.6696163800542&lng=-122.503883058
     "data": {
         "results": [
             {
-                "state_addr": "washington",
-                "ground_elevation": null,
-                "roof_material": null,
+                "state_addr": "california",
+                "ground_elevation": "740.5600000000001",
+                "roof_material": "TILE",
                 "roof_condition": "good",
-                "roof_type_rf": "Gable",
-                "pool_ar_pa": null,
+                "roof_type_rf": "Mix",
+                "pool_ar_pa": "730.651316472223",
                 "trampoline_pa": null,
-                "solar_panels_rf": "318.50283521527814",
-                "skylights_rf": null,
-                "dis_coast_b": "37.032741789772665",
-                "dis_water_body_b": "0.217964150883838",
+                "solar_panels_rf": "329.69725727083375",
+                "skylights_rf": "1",
+                "dis_coast_b": "27.97341026041662",
+                "dis_water_body_b": "2.7106145580808034",
                 "num_storeys": null
             }
         ]
