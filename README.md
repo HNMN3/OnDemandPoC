@@ -113,7 +113,7 @@ Here are the sample request and response
 
 ## Request Sample
 ```shell
-https://api.geox-ai.com/poc/api/?lat=32.866004&lng=-96.652901
+https://api.geox-ai.com/api/v2/locations?lat=45.6696163800542&lng=-122.5038830583887
 ```
 
 ## Response Sample
@@ -123,34 +123,17 @@ https://api.geox-ai.com/poc/api/?lat=32.866004&lng=-96.652901
         "results": [
             {
                 "state_addr": "washington",
-                "gx_key_bu": "2ff8f064-786c-470f-be7a-4db177516bdb",
-                "footprint_count_p": "2",
-                "solar_panel_area_b": "318.50283521527814",
-                "air_conditioner_count_b": null,
-                "parcel_area": "6022.168511194452",
-                "temporary_pool_area_p": "108.06922830555568",
-                "roof_type": "Gable",
-                "tree_over_b": null,
-                "pool_area_p": null,
-                "footprint_over_p": "37.31",
-                "tree_area_b": null,
-                "pool_count_p": null,
-                "footprint_area_p": "2246.6343956111136",
-                "skylight_count_b": null,
+                "ground_elevation": null,
+                "roof_material": null,
+                "roof_condition": "good",
+                "roof_type_rf": "Gable",
+                "pool_ar_pa": null,
+                "trampoline_pa": null,
+                "solar_panels_rf": "318.50283521527814",
+                "skylights_rf": null,
                 "dis_coast_b": "37.032741789772665",
                 "dis_water_body_b": "0.217964150883838",
-                "footprint_area": "2136.646393732116",
-                "rust_area_b": null,
-                "ponding_area_b": null,
-                "tarp_area_b": null,
-                "parking_lot_area_p": null,
-                "trampoline_count_p": null,
-                "air_conditioner_area_b": null,
-                "roof_condition": "good",
-                "roof_condition_score": null,
-                "roof_type_score": null,
-                "geom_id_p": "123378.0",
-                "table_name_p": "wa_clark"
+                "num_storeys": null
             }
         ]
     },
